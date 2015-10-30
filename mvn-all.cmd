@@ -1,0 +1,1 @@
+call mvn aspectj:compile aspectj:test-compile install

@@ -1,0 +1,4 @@
+src.includes = ../com.u14n.aspects/src/main/aspect,\
+               ../com.u14n.aspects/src/main/java,\
+               src/main/aspect,\
+               src/main/java

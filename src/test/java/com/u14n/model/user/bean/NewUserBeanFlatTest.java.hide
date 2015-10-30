@@ -1,0 +1,244 @@
+/**
+ *
+ */
+package com.u14n.model.user.bean;
+
+import junit.framework.Assert;
+
+/**
+ * @author Klaus Wenger
+ */
+public class NewUserBeanFlatTest extends NewUserBeanTest {
+    /* (non-Javadoc)
+     * @see junit.framework.TestCase#setUp()
+     */
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        super.kjwenger =
+            new NewUserBean(UserBeanTest.KJWENGER, UserBeanTest.LUSDFHGLWEK);
+    }
+    /* (non-Javadoc)
+     * @see junit.framework.TestCase#tearDown()
+     */
+    @Override
+    protected void tearDown() throws Exception {
+        super.tearDown();
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#Flat()}.
+     */
+    public final void testFlat() {
+        final NewUserBean.Flat newUserBean = new NewUserBean.Flat();
+        Assert.assertNull(newUserBean.getName());
+        Assert.assertNull(newUserBean.getPassword());
+        Assert.assertNull(newUserBean.getConfirmPassword());
+        Assert.assertTrue(newUserBean.checkPassword(null));
+        Assert.assertFalse(newUserBean.checkPassword(UserBeanTest.EMPTY));
+        Assert.assertFalse(newUserBean.checkPassword(UserBeanTest.LUSDFHGLWEK));
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#Flat(java.lang.String, java.lang.String)}.
+     */
+    public final void testFlatStringString() {
+        final NewUserBean newUserBean =
+            new NewUserBean(UserBeanTest.KJWENGER, UserBeanTest.LUSDFHGLWEK);
+        Assert.assertEquals(UserBeanTest.KJWENGER, newUserBean.getName());
+        Assert.assertEquals(UserBeanTest.LUSDFHGLWEK,
+                newUserBean.getPassword());
+        Assert.assertNull(newUserBean.getConfirmPassword());
+        Assert.assertFalse(newUserBean.checkPassword(null));
+        Assert.assertFalse(newUserBean.checkPassword(UserBeanTest.EMPTY));
+        Assert.assertTrue(newUserBean.checkPassword(UserBeanTest.LUSDFHGLWEK));
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#Flat(java.lang.String)}.
+     */
+    public final void testFlatString() {
+        final NewUserBean.Flat newUserBean =
+            new NewUserBean.Flat(UserBeanTest.KJWENGER);
+        Assert.assertEquals(UserBeanTest.KJWENGER, newUserBean.getName());
+        Assert.assertNull(newUserBean.getPassword());
+        Assert.assertNull(newUserBean.getConfirmPassword());
+        Assert.assertTrue(newUserBean.checkPassword(null));
+        Assert.assertFalse(newUserBean.checkPassword(UserBeanTest.EMPTY));
+        Assert.assertFalse(newUserBean.checkPassword(UserBeanTest.LUSDFHGLWEK));
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#Flat(com.u14n.model.user.User)}.
+     */
+    public final void testFlatUser() {
+        final NewUserBean.Flat newUserBean =
+            new NewUserBean.Flat(this.kjwenger);
+        Assert.assertEquals(this.kjwenger, newUserBean);
+        Assert.assertEquals(UserBeanTest.KJWENGER, newUserBean.getName());
+        Assert.assertEquals(UserBeanTest.LUSDFHGLWEK,
+                newUserBean.getPassword());
+        Assert.assertNull(newUserBean.getConfirmPassword());
+        Assert.assertFalse(newUserBean.checkPassword(null));
+        Assert.assertFalse(newUserBean.checkPassword(UserBeanTest.EMPTY));
+        Assert.assertTrue(newUserBean.checkPassword(UserBeanTest.LUSDFHGLWEK));
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getAddress()}.
+     */
+    public final void testGetAddress() {
+        Assert.assertNotNull(((NewUserBean.Flat) this.kjwenger).getAddress());
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getDateOfBirth()}.
+     */
+    public final void testGetDateOfBirth() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getFirstName()}.
+     */
+    public final void testGetFirstName() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getLastName()}.
+     */
+    public final void testGetLastName() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getMiddleName()}.
+     */
+    public final void testGetMiddleName() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setDateOfBirth(java.util.Date)}.
+     */
+    public final void testSetDateOfBirth() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setFirstName(java.lang.String)}.
+     */
+    public final void testSetFirstName() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setLastName(java.lang.String)}.
+     */
+    public final void testSetLastName() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setMiddleName(java.lang.String)}.
+     */
+    public final void testSetMiddleName() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getLine1()}.
+     */
+    public final void testGetLine1() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getLine2()}.
+     */
+    public final void testGetLine2() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setLine1(java.lang.String)}.
+     */
+    public final void testSetLine1() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setLine2(java.lang.String)}.
+     */
+    public final void testSetLine2() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getCity()}.
+     */
+    public final void testGetCity() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getZipCode()}.
+     */
+    public final void testGetZipCode() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getCountry()}.
+     */
+    public final void testGetCountry() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getDescription()}.
+     */
+    public final void testGetDescription() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getFax()}.
+     */
+    public final void testGetFax() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getPhone()}.
+     */
+    public final void testGetPhone() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setCountry(java.lang.String)}.
+     */
+    public final void testSetCountry() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#getState()}.
+     */
+    public final void testGetState() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setCity(java.lang.String)}.
+     */
+    public final void testSetCity() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setZipCode(java.lang.String)}.
+     */
+    public final void testSetZipCode() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setDescription(java.lang.String)}.
+     */
+    public final void testSetDescription() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setFax(java.lang.String)}.
+     */
+    public final void testSetFax() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setPhone(java.lang.String)}.
+     */
+    public final void testSetPhone() {
+        Assert.fail("Not yet implemented");
+    }
+    /**
+     * Test method for {@link com.u14n.model.user.bean.NewUserBean.Flat#setState(java.lang.String)}.
+     */
+    public final void testSetState() {
+        Assert.fail("Not yet implemented");
+    }
+}
