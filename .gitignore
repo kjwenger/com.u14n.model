@@ -12,5 +12,5 @@
 hs_err_pid*
 
 # Generated Artifacts
-*/target/**
-*/ajdocworkingdir/**
+/ajdocworkingdir
+/target
